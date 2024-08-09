@@ -78,7 +78,6 @@ describe('Rents API', () => {
         const response = await request(app)
             .post('/api/rents')
             .send(newRent);
-        console.log(response.body);
         expect(response.status).toBe(200);
         expect(response.body).toEqual({ ...newRent, id: expect.any(String), createdAt: expect.any(String) });
     });
