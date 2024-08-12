@@ -44,15 +44,15 @@ The server will start on `http://localhost:3000`.
 ### Bloqs
 
 - **Get all bloqs**
-  - **Endpoint:** `GET /bloqs`
+  - **Endpoint:** `GET api/bloqs`
   - **Description:** Retrieves a list of all bloqs.
 
 - **Get a bloq by ID**
-  - **Endpoint:** `GET /bloqs/:id`
+  - **Endpoint:** `GET api/bloqs/:id`
   - **Description:** Retrieves a bloq by ID.
 
 - **Create a new bloq**
-  - **Endpoint:** `POST /bloqs`
+  - **Endpoint:** `POST api/bloqs`
   - **Description:** Creates a new bloq.
   - **Body:**
     ```json
@@ -63,7 +63,7 @@ The server will start on `http://localhost:3000`.
     ```
 
 - **Update a bloq**
-  - **Endpoint:** `PUT /bloqs/:id`
+  - **Endpoint:** `PUT api/bloqs/:id`
   - **Description:** Updates an existing bloq by ID.
   - **Body:**
     ```json
@@ -74,25 +74,25 @@ The server will start on `http://localhost:3000`.
     ```
 
 - **Delete a bloq**
-  - **Endpoint:** `DELETE /bloqs/:id`
+  - **Endpoint:** `DELETE api/bloqs/:id`
   - **Description:** Deletes a bloq by ID.
 
 - **Get lockers of a bloq**
-  - **Endpoint:** `GET /bloqs/:id/lockers`
+  - **Endpoint:** `GET api/bloqs/:id/lockers`
   - **Description:** Retrieves all lockers associated with a bloq by bloq ID.
 
 ### Lockers
 
 - **Get all lockers**
-  - **Endpoint:** `GET /lockers`
+  - **Endpoint:** `GET api/lockers`
   - **Description:** Retrieves a list of all lockers.
 
 - **Get a locker by ID**
-  - **Endpoint:** `GET /lockers/:id`
+  - **Endpoint:** `GET api/lockers/:id`
   - **Description:** Retrieves a locker by ID.
 
 - **Create a new locker**
-  - **Endpoint:** `POST /lockers`
+  - **Endpoint:** `POST api/lockers`
   - **Description:** Creates a new locker.
   - **Body:**
     ```json
@@ -104,7 +104,7 @@ The server will start on `http://localhost:3000`.
     ```
 
 - **Update a locker**
-  - **Endpoint:** `PUT /lockers/:id`
+  - **Endpoint:** `PUT api/lockers/:id`
   - **Description:** Updates an existing locker by ID.
   - **Body:**
     ```json
@@ -116,25 +116,25 @@ The server will start on `http://localhost:3000`.
     ```
 
 - **Delete a locker**
-  - **Endpoint:** `DELETE /lockers/:id`
+  - **Endpoint:** `DELETE api/lockers/:id`
   - **Description:** Deletes a locker by ID.
 
 - **Get rents of a locker**
-  - **Endpoint:** `GET /lockers/:id/rents`
+  - **Endpoint:** `GET api/lockers/:id/rents`
   - **Description:** Retrieves all rents associated with a locker by locker ID.
 
 ### Rents
 
 - **Get all rents**
-  - **Endpoint:** `GET /rents`
+  - **Endpoint:** `GET api/rents`
   - **Description:** Retrieves a list of all rents.
 
 - **Get a rent by ID**
-  - **Endpoint:** `GET /rents/:id`
+  - **Endpoint:** `GET api/rents/:id`
   - **Description:** Retrieves a rent by ID.
 
 - **Create a new rent**
-  - **Endpoint:** `POST /rents`
+  - **Endpoint:** `POST api/rents`
   - **Description:** Creates a new rent.
   - **Body:**
     ```json
@@ -147,7 +147,7 @@ The server will start on `http://localhost:3000`.
     ```
 
 - **Update a rent**
-  - **Endpoint:** `PUT /rents/:id`
+  - **Endpoint:** `PUT api/rents/:id`
   - **Description:** Updates an existing rent by ID.
   - **Body:**
     ```json
@@ -160,5 +160,5 @@ The server will start on `http://localhost:3000`.
     ```
 
 - **Delete a rent**
-  - **Endpoint:** `DELETE /rents/:id`
+  - **Endpoint:** `DELETE api/rents/:id`
   - **Description:** Deletes a rent by ID.
