@@ -1,7 +1,8 @@
 import fs from 'fs/promises';
 import path from 'path';
 
-const dataPath = path.join(__dirname, '../data');
+const rootDir = process.cwd();
+const dataPath = path.join(rootDir, 'data');
 
 export const readData = async (entity: string) => {
     const filePath = path.join(dataPath, `${entity}.json`);
