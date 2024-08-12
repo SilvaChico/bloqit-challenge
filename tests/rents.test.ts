@@ -7,12 +7,12 @@ import {
     updateRent,
     createRent,
     getRentLocker,
-} from './rents';
-import { Rent, RentStatus, RentSize, Locker, LockerStatus, Bloq } from '../models';
-import { readData, writeData } from '../database';
+} from '../src/controllers/rents';
+import { Rent, RentStatus, RentSize, Locker, LockerStatus, Bloq } from '../src/models';
+import { readData, writeData } from '../src/database';
 import { v4 as uuidv4 } from 'uuid';
 
-jest.mock('../database');
+jest.mock('../src/database');
 
 const app = express();
 app.use(express.json());

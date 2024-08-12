@@ -7,15 +7,12 @@ import {
     deleteLocker,
     getLocker,
     getLockersRents
-} from './lockers';
-import { Locker, LockerStatus, Bloq, Rent, RentSize, RentStatus } from '../models';
-import { readData, writeData } from '../database';
+} from '../src/controllers/lockers';
+import { Locker, LockerStatus, Bloq, Rent, RentSize, RentStatus } from '../src/models';
+import { readData, writeData } from '../src/database';
 import { v4 as uuidv4 } from 'uuid';
-import { mock } from 'node:test';
 
-
-
-jest.mock('../database');
+jest.mock('../src/database');
 
 const app = express();
 app.use(express.json());

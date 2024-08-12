@@ -7,11 +7,11 @@ import {
     deleteBloq,
     getBloq,
     getBloqLockers
-} from './bloqs';
-import { Bloq } from '../models';
-import { readData, writeData } from '../database';
+} from '../src/controllers/bloqs';
+import { Bloq } from '../src/models';
+import { readData, writeData } from '../src/database';
 
-jest.mock('../database');
+jest.mock('../src/database');
 
 const app = express();
 app.use(express.json());

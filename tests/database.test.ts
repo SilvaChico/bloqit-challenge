@@ -1,4 +1,4 @@
-import { readData, writeData } from './database';
+import { readData, writeData } from '../src/database';
 import fs from 'fs/promises';
 import path from 'path';
 
