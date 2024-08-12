@@ -98,21 +98,3 @@ export const getRent = async (req: Request, res: Response) => {
 
     res.json(rent);
 }
-
-export const getRentLocker = async (req: Request, res: Response) => {
-    const rents: Rent[] = await readData('rents');
-    const rent = rents.find(rent => rent.id === req.params.id);
-
-    if (!rent) {
-        return res.status(404).json({ error: 'Rent not found' });
-    }
-
-    if (!rent.lockerId) {
-        return res.status(404).json({ error: 'Rent has no locker' });
-    }
-
-    const lockers = await readData('lockers');
-    const locker = lockers.find((locker: Locker) => locker.id === rent.lockerId);
-
-    res.json(locker);
-}

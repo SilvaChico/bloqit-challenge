@@ -16,6 +16,17 @@ export const getBloqs = async (req: Request, res: Response) => {
     res.json(bloqs);
 };
 
+export const getBloq = async (req: Request, res: Response) => {
+    const bloqs: Bloq[] = await readData('bloqs');
+    const bloq = bloqs.find(bloq => bloq.id === req.params.id);
+
+    if (!bloq) {
+        return res.status(404).json({ error: 'Bloq not found' });
+    }
+
+    res.json(bloq);
+}
+
 export const createBloq = async (req: Request, res: Response) => {
     const result = BloqSchema.safeParse(req.body);
 
@@ -61,17 +72,6 @@ export const deleteBloq = async (req: Request, res: Response) => {
     bloqs.splice(bloqIndex, 1);
     await writeData('bloqs', bloqs);
     res.status(204).send();
-}
-
-export const getBloq = async (req: Request, res: Response) => {
-    const bloqs: Bloq[] = await readData('bloqs');
-    const bloq = bloqs.find(bloq => bloq.id === req.params.id);
-
-    if (!bloq) {
-        return res.status(404).json({ error: 'Bloq not found' });
-    }
-
-    res.json(bloq);
 }
 
 export const getBloqLockers = async (req: Request, res: Response) => {

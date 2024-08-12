@@ -47,6 +47,10 @@ The server will start on `http://localhost:3000`.
   - **Endpoint:** `GET /bloqs`
   - **Description:** Retrieves a list of all bloqs.
 
+- **Get a bloq by ID**
+  - **Endpoint:** `GET /bloqs/:id`
+  - **Description:** Retrieves a bloq by ID.
+
 - **Create a new bloq**
   - **Endpoint:** `POST /bloqs`
   - **Description:** Creates a new bloq.
@@ -73,10 +77,6 @@ The server will start on `http://localhost:3000`.
   - **Endpoint:** `DELETE /bloqs/:id`
   - **Description:** Deletes a bloq by ID.
 
-- **Get a bloq by ID**
-  - **Endpoint:** `GET /bloqs/:id`
-  - **Description:** Retrieves a bloq by ID.
-
 - **Get lockers of a bloq**
   - **Endpoint:** `GET /bloqs/:id/lockers`
   - **Description:** Retrieves all lockers associated with a bloq by bloq ID.
@@ -86,6 +86,10 @@ The server will start on `http://localhost:3000`.
 - **Get all lockers**
   - **Endpoint:** `GET /lockers`
   - **Description:** Retrieves a list of all lockers.
+
+- **Get a locker by ID**
+  - **Endpoint:** `GET /lockers/:id`
+  - **Description:** Retrieves a locker by ID.
 
 - **Create a new locker**
   - **Endpoint:** `POST /lockers`
@@ -115,10 +119,6 @@ The server will start on `http://localhost:3000`.
   - **Endpoint:** `DELETE /lockers/:id`
   - **Description:** Deletes a locker by ID.
 
-- **Get a locker by ID**
-  - **Endpoint:** `GET /lockers/:id`
-  - **Description:** Retrieves a locker by ID.
-
 - **Get rents of a locker**
   - **Endpoint:** `GET /lockers/:id/rents`
   - **Description:** Retrieves all rents associated with a locker by locker ID.
@@ -128,6 +128,10 @@ The server will start on `http://localhost:3000`.
 - **Get all rents**
   - **Endpoint:** `GET /rents`
   - **Description:** Retrieves a list of all rents.
+
+- **Get a rent by ID**
+  - **Endpoint:** `GET /rents/:id`
+  - **Description:** Retrieves a rent by ID.
 
 - **Create a new rent**
   - **Endpoint:** `POST /rents`
@@ -158,11 +162,3 @@ The server will start on `http://localhost:3000`.
 - **Delete a rent**
   - **Endpoint:** `DELETE /rents/:id`
   - **Description:** Deletes a rent by ID.
-
-- **Get a rent by ID**
-  - **Endpoint:** `GET /rents/:id`
-  - **Description:** Retrieves a rent by ID.
-
-- **Get locker of a rent**
-  - **Endpoint:** `GET /rents/:id/locker`
-  - **Description:** Retrieves the locker associated with a rent by rent ID.

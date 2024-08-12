@@ -6,7 +6,6 @@ import {
     deleteRent,
     updateRent,
     createRent,
-    getRentLocker,
 } from '../src/controllers/rents';
 import { Rent, RentStatus, RentSize, Locker, LockerStatus, Bloq } from '../src/models';
 import { readData, writeData } from '../src/database';
@@ -21,7 +20,6 @@ app.get('/api/rents/:id', getRent);
 app.delete('/api/rents/:id', deleteRent);
 app.put('/api/rents/:id', updateRent);
 app.post('/api/rents', createRent);
-app.get('/api/rents/:id/locker', getRentLocker);
 
 const lockerId1 = uuidv4();
 const lockerId2 = uuidv4();
@@ -139,11 +137,5 @@ describe('Rents API', () => {
         const response = await request(app).delete('/api/rents/999');
         expect(response.status).toBe(404);
         expect(response.body).toEqual({ error: 'Rent not found' });
-    });
-
-    it('should get the locker associated with a rent', async () => {
-        const response = await request(app).get('/api/rents/1/locker');
-        expect(response.status).toBe(200);
-        expect(response.body).toEqual(mockLockers[0]);
     });
 });
